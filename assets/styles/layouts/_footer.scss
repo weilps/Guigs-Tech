@@ -1,0 +1,32 @@
+footer {
+  background: $color3;
+  color: $color1;
+  text-align: center;
+  .section-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    padding: 0;
+    .logo {
+      @include center-unique-child;
+      img {
+        height: 150px;
+      }
+    }
+    .tree {
+      @include center-unique-child;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+    .copyright {
+      padding: 50px 0 0;
+      i {
+        font-size: 0.3rem;
+      }
+    }
+  }
+}

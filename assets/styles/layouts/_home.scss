@@ -1,0 +1,38 @@
+.title {
+  .section-container {
+    border-bottom: $color3 2px dashed;
+    position: relative;
+    h3 {
+      padding-bottom: 200px;
+    }
+    .img {
+      position: absolute;
+      bottom: -150px;
+      left: 50%;
+      transform: translate(-50%);
+
+      img {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        border: $color3 2px solid;
+      }
+    }
+  }
+}
+
+.bio {
+  background: $color5;
+  .section-container {
+    padding-top: 200px;
+    p {
+      color: $color1;
+      width: 80%;
+      margin: 0 auto;
+      font-weight: 100;
+      letter-spacing: 1px;
+      font-size: 1.5rem;
+      padding: 20px 0;
+    }
+  }
+}

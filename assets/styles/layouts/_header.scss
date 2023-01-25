@@ -1,0 +1,44 @@
+header {
+  @include center-unique-child;
+  height: 100px;
+  background: $color3;
+  z-index: 10;
+  nav {
+    max-width: 1240px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0% 20% 60% 20%;
+    div {
+      align-items: center;
+      display: flex;
+      ul {
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      img {
+        height: 100px;
+      }
+    }
+    .menu {
+      @include center-unique-child;
+      ul {
+        width: 70%;
+        max-width: 400px;
+      }
+    }
+  }
+
+  //   @media screen and (max-width: 925px) {
+  //     max-width: 400px;
+  //     // .menu {
+  //     //   display: none;
+  //     // }
+  //   }
+}
