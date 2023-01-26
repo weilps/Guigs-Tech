@@ -5,6 +5,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
+
+    <meta
+      name="description"
+      content="Get the best in web development with Guigs Tech. We specialize in full stack web development, blockchain development, and custom software creation. Trust us to take your business to the next level."
+    />
+
+    <meta property="og:title" content="Guigs Tech" />
+    <meta
+      property="og:type"
+      content="Full Stack, Blockchain, Software Development"
+    />
+    <meta property="og:url" content="https://guigs.tech" />
+    <meta
+      name="og:description"
+      content="Get the best in web development with Guigs Tech. We specialize in full stack web development, blockchain development, and custom software creation. Trust us to take your business to the next level."
+    />
+    <meta property="og:image" content="./assets/img/logo/png/logo-color.png" />
+
+    <!--Font Awesome Library-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./../assets/styles/index.css" />
+
+    <link rel="tab icon" href="./../assets/img/meta/tab-icon.png" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div class="burger"><i class="fa-solid fa-bars"></i></div>
+        <div class="tree">
+          <ul>
+            <li>
+              <a href="mailto:info@guigs.tech"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/weilps"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/guillaume-gaudin/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="./../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <img
+            src="./assets/img/logo/png/logo-color.png"
+            alt="logo-guigs-tech"
+          />
+        </div>
+      </nav>
+    </header>
+    <section class="title">
+      <div class="section-container">
+        <h1>Contact Us</h1>
+        <h3>
+          Get a quote or have any questions ? Leave your contact details, we
+          will get back to you lightning fast!
+        </h3>
+      </div>
+    </section>
+    <section class="form">
+      <div class="section-container">
+        <form action="../server/form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="user_email" />
+          <br />
+          <label for="message">Message:</label>
+          <textarea id="message" name="user_message"></textarea>
+          <br />
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="section-container">
+        <div class="logo">
+          <img
+            src="./assets/img/logo/png/logo-color.png"
+            alt="logo-guigs-tech"
+          />
+        </div>
+        <div class="reste">
+          <div class="tree">
+            <ul>
+              <li>
+                <a href="mailto:info@guigs.tech"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/weilps"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/guillaume-gaudin/"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright">
+            <p>
+              Website by Guillaume Gaudin @ Guigs Tech<i
+                class="fa-regular fa-copyright"
+              ></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
 </html>

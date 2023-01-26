@@ -2,13 +2,16 @@ footer {
   background: $color3;
   color: $color1;
   text-align: center;
+  @include center-unique-child;
   .section-container {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 150px 1fr 150px;
     align-items: center;
     padding: 0;
     .logo {
-      @include center-unique-child;
+      display: flex;
+      align-items: center;
+      justify-content: left;
       img {
         height: 150px;
       }
