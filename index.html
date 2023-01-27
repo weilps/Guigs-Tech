@@ -32,6 +32,16 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Shoelace -->
+    <link
+      rel="stylesheet"
+      href="./assets/shoelace-style/shoelace/dist/themes/light.css"
+    />
+    <script
+      type="module"
+      src="./assets/shoelace-style/shoelace/dist/shoelace.js"
+    ></script>
+
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/styles/index.css" />
 
@@ -40,7 +50,7 @@
   <body>
     <header>
       <nav>
-        <div class="burger"><i class="fa-solid fa-bars"></i></div>
+        <div class="burger menu-button"><i class="fa-solid fa-bars"></i></div>
         <div class="tree">
           <ul>
             <li>
@@ -77,42 +87,129 @@
     </header>
     <section class="title">
       <div class="section-container">
-        <h1>Full Stack Web & Mobile Dev</h1>
-        <h3>Web, App, Softwares, Blockchain development</h3>
+        <div class="wrapper">
+          <div class="appear" id="h1-wrapper">
+            <h1>Guillaume Gaudin</h1>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="appear" id="h3-wrapper">
+            <h3>Full Stack Web & Mobile Dev</h3>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="appear" id="h4-wrapper">
+            <h4>Web, App, Blockchain, Ethical hacking</h4>
+          </div>
+        </div>
+        <div class="scroll-wrapper">
+          <p>Scroll to enter</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="line-wrapper">
+      <div class="line"></div>
+    </div>
+
+    <section class="bio">
+      <div class="section-container">
         <div class="img">
           <img
             src="./assets/img/index/profile-pic-gga.png"
             alt="profile-picture"
           />
         </div>
-      </div>
-    </section>
-
-    <section class="bio">
-      <div class="section-container">
         <p class="p1">
           Hello, my name is Guillaume and I am the CEO of Guigs Tech. I
           graduated from the best French University in 2017, and after five
           successful years as an engineer in the Civil Industry, I decided to
           focus on my personal projects and founded Guigs Tech. My company
-          specializes in full stack web development, blockchain development, and
-          other software development. I have had the opportunity to work on a
-          variety of website design projects and have even developed a custom
-          invoicing software for a wine tasting company.
+          specializes in full stack web & app development, blockchain
+          development and software development.
         </p>
-        <p class="p2">
-          I am not just a tech expert, but I also have a passion for adventure
-          sports like surfing, wakeboarding, and climbing. I even work as a rope
-          access technician, which allows me to travel the world and gain unique
-          perspectives that I bring back to my work at Guigs Tech.
-        </p>
-        <p class="p3">
-          At Guigs Tech, we are dedicated to providing our clients with the
-          highest level of service and quality. We understand that every
-          business has unique needs and we strive to understand your goals in
-          order to create customized solutions that will take your business to
-          the next level. Trust Guigs Tech for all your web development needs !
-        </p>
+
+        <a href="./pages/about.html" class="button-s1">Read more</a>
+      </div>
+
+      <div class="line-wrapper">
+        <div class="line"></div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="section-container">
+        <h2 class="title">
+          <span>E</span>
+          <span>x</span>
+          <span>p</span>
+          <span>e</span>
+          <span>r</span>
+          <span>t</span>
+          <span>i</span>
+          <span>s</span>
+          <span>e</span>
+          <span> </span>
+          <span>a</span>
+          <span>t</span>
+          <span> </span>
+          <span>a</span>
+          <span> </span>
+          <span>g</span>
+          <span>l</span>
+          <span>a</span>
+          <span>n</span>
+          <span>c</span>
+          <span>e</span>
+        </h2>
+
+        <div class="wrapper">
+          <div class="appear">
+            <p>HTML, CSS, JS</p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="appear">
+            <p>PHP, SQLite, Python</p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="appear">
+            <p>Solidity, Smart Contracts, NFTs</p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="appear">
+            <p>SEO, AI, ...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="line-wrapper">
+      <div class="line"></div>
+    </div>
+
+    <section class="portfolio" id="portfolio">
+      <div class="section-container">
+        <h2 class="title">
+          <span>P</span>
+          <span>o</span>
+          <span>r</span>
+          <span>t</span>
+          <span>f</span>
+          <span>o</span>
+          <span>l</span>
+          <span>i</span>
+          <span>o</span>
+        </h2>
+        <div class="wrapper">
+          <div class="appear" id="h3-2-wrapper">
+            <h3>Have a look at our accomplishments</h3>
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="projet" id="prj1"></div>
+        </div>
       </div>
     </section>
     <footer>

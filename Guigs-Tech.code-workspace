@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../../Conzatti Rope Access"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Guigs-Tech"
+  }
+}

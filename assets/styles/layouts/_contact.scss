@@ -1,0 +1,51 @@
+.form {
+  .section-container {
+    @include center-unique-child;
+    form {
+      width: 100%;
+      max-width: 450px;
+      .container-form {
+        position: relative;
+        i {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 20px;
+        }
+        input {
+          margin: 5px 0;
+          width: 100%;
+          padding: 20px 40px;
+          border: $color3 1px solid;
+          border-radius: 20px;
+        }
+
+        textarea {
+          margin: 5px 0;
+          width: 100%;
+          padding: 20px;
+          border: $color3 1px solid;
+          border-radius: 20px;
+          height: 200px;
+        }
+
+        #submit-bt1 {
+          width: 200px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 1rem;
+          padding: 20px;
+          cursor: pointer;
+          transition: 0.4s;
+          &:hover {
+            letter-spacing: 3px;
+          }
+        }
+      }
+      #success-message,
+      #error-message {
+        display: none;
+      }
+    }
+  }
+}

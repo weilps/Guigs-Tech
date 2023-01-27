@@ -132,10 +132,52 @@ header nav .menu {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: all 0.4s ease-in-out;
 }
 header nav .menu ul {
   width: 70%;
   max-width: 400px;
+}
+@media screen and (max-width: 925px) {
+  header nav {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav .burger i {
+    font-size: 3rem;
+    color: rgb(249, 249, 249);
+  }
+  header nav .burger:hover {
+    cursor: pointer;
+  }
+  header nav .tree {
+    display: none;
+  }
+  header nav .menu {
+    display: none;
+  }
+  header nav .menu.show {
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: rgba(0, 51, 102, 0.5);
+    width: 300px;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #888;
+    border-radius: 5px;
+    z-index: 11;
+  }
+  header nav .menu.show ul {
+    display: block;
+    text-align: left;
+  }
+  header nav .menu.show ul li {
+    padding: 10px 0;
+  }
 }
 
 footer {
@@ -214,4 +256,55 @@ footer .section-container .copyright i {
   letter-spacing: 1px;
   font-size: 1.5rem;
   padding: 20px 0;
+}
+
+.form .section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form .section-container form {
+  width: 100%;
+  max-width: 450px;
+}
+.form .section-container form .container-form {
+  position: relative;
+}
+.form .section-container form .container-form i {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 20px;
+}
+.form .section-container form .container-form input {
+  margin: 5px 0;
+  width: 100%;
+  padding: 20px 40px;
+  border: rgb(0, 51, 102) 1px solid;
+  border-radius: 20px;
+}
+.form .section-container form .container-form textarea {
+  margin: 5px 0;
+  width: 100%;
+  padding: 20px;
+  border: rgb(0, 51, 102) 1px solid;
+  border-radius: 20px;
+  height: 200px;
+}
+.form .section-container form .container-form #submit-bt1 {
+  width: 200px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form .section-container form .container-form #submit-bt1:hover {
+  letter-spacing: 3px;
+}
+.form .section-container form #success-message,
+.form .section-container form #error-message {
+  display: none;
 }/*# sourceMappingURL=index.css.map */

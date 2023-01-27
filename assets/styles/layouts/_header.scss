@@ -28,17 +28,52 @@ header {
     }
     .menu {
       @include center-unique-child;
+      transition: all 0.4s ease-in-out;
       ul {
         width: 70%;
         max-width: 400px;
       }
     }
+    @media screen and (max-width: 925px) {
+      max-width: 400px;
+      display: flex;
+      justify-content: space-between;
+      .burger {
+        i {
+          font-size: 3rem;
+          color: $color1;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .tree {
+        display: none;
+      }
+      .menu {
+        display: none;
+      }
+      .menu.show {
+        transition: all 0.4s ease-in-out;
+        display: flex;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: $color3-t;
+        width: 300px;
+        flex-wrap: wrap;
+        padding: 20px;
+        box-shadow: 0px 0px 10px #888;
+        border-radius: 5px;
+        z-index: 11;
+        ul {
+          display: block;
+          text-align: left;
+          li {
+            padding: 10px 0;
+          }
+        }
+      }
+    }
   }
-
-  //   @media screen and (max-width: 925px) {
-  //     max-width: 400px;
-  //     // .menu {
-  //     //   display: none;
-  //     // }
-  //   }
 }
