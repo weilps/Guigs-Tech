@@ -16,6 +16,33 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        a,
+        a:visited {
+          color: $color1;
+          &::after {
+            display: none;
+          }
+          &:hover {
+            &::after {
+              background: $color5;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .tree {
+      a,
+      a:visited {
+        &::after {
+          display: none;
+        }
+        &:hover {
+          &::after {
+            display: none;
+          }
+        }
       }
     }
     .logo {
@@ -32,6 +59,11 @@ header {
       ul {
         width: 70%;
         max-width: 400px;
+        #menu-current-page {
+          &::after {
+            display: block;
+          }
+        }
       }
     }
     @media screen and (max-width: 925px) {

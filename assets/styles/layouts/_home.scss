@@ -1,21 +1,39 @@
-.title {
+.title-sec {
+  min-height: 100vh;
+  margin: 0 2vw 0;
   .section-container {
-    border-bottom: $color3 2px dashed;
+    // border-bottom: $color3 2px dashed;
     position: relative;
+    min-height: calc(100vh - 100px);
+    padding: 15vh 0 0;
     h3 {
-      padding-bottom: 200px;
+      font-size: calc(0.7rem + 5vw);
+      margin: 18px 0;
+      text-align: left;
     }
-    .img {
+    h4 {
+      font-size: calc(0.6rem + 4vw);
+      margin: 18px 0;
+      text-align: left;
+    }
+    .scroll-wrapper {
       position: absolute;
-      bottom: -150px;
       left: 50%;
-      transform: translate(-50%);
+      transform: translateX(-50%);
+      bottom: 4vw;
+      font-size: calc(0.8rem + 0.5vw);
 
-      img {
-        height: 300px;
-        width: 300px;
-        border-radius: 50%;
-        border: $color3 2px solid;
+      @media screen and (max-width: 1240px) {
+        bottom: 6vw;
+      }
+      @media screen and (max-width: 925px) {
+        bottom: 8vw;
+      }
+      @media screen and (max-width: 650px) {
+        bottom: 10vw;
+      }
+      @media screen and (max-width: 450px) {
+        bottom: 12vw;
       }
     }
   }
@@ -24,15 +42,37 @@
 .bio {
   background: $color5;
   .section-container {
-    padding-top: 200px;
+    padding: 200px 0;
+    .img {
+      img {
+        height: 40vh;
+        border-radius: 50%;
+        border: $color3 2px solid;
+      }
+    }
+    .h2-wrapper {
+      mix-blend-mode: exclusion;
+      margin: -40vh 0 200px;
+      @media screen and (max-width: 925px) {
+        margin: -50vh 0 200px;
+      }
+    }
     p {
       color: $color1;
       width: 80%;
+      min-width: 350px;
       margin: 0 auto;
       font-weight: 100;
       letter-spacing: 1px;
-      font-size: 1.5rem;
-      padding: 20px 0;
+      font-size: calc(1rem + 1vw);
+      padding: 10px 0 100px;
+      line-height: calc(7px + 4.5vw);
+    }
+    a,
+    a:visited {
+      &::after {
+        display: none;
+      }
     }
   }
 }
