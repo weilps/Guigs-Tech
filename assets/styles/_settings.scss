@@ -149,6 +149,32 @@ a:visited {
   transition-delay: 0.65s;
 }
 
+.wrapper {
+  perspective: 500px;
+  .appear {
+    opacity: 0;
+    transform: translateY(100%) rotateX(-80deg);
+    transform-origin: top center;
+    transform-style: preserve-3d;
+    transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .appear.is-inview {
+    // .appear {
+    transition-delay: 2s;
+    opacity: 1;
+    transform: none;
+    // }
+  }
+
+  #h1-wrapper {
+    transition-delay: 1s;
+  }
+  #h4-wrapper {
+    transition-delay: 3s;
+  }
+}
+
 .section-container {
   // max-width: 1240px;
   width: 100%;

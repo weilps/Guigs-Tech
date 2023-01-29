@@ -134,6 +134,28 @@ a:visited::after {
   transition-delay: 0.65s;
 }
 
+.wrapper {
+  perspective: 500px;
+}
+.wrapper .appear {
+  opacity: 0;
+  transform: translateY(100%) rotateX(-80deg);
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.wrapper .appear.is-inview {
+  transition-delay: 2s;
+  opacity: 1;
+  transform: none;
+}
+.wrapper #h1-wrapper {
+  transition-delay: 1s;
+}
+.wrapper #h4-wrapper {
+  transition-delay: 3s;
+}
+
 .section-container {
   width: 100%;
 }
@@ -410,6 +432,94 @@ footer .section-container .copyright i {
 .bio .section-container a::after,
 .bio .section-container a:visited::after {
   display: none;
+}
+
+.skills {
+  margin: 200px 0 250px;
+}
+.skills h2 {
+  margin-bottom: 150px;
+}
+.skills .wrapper {
+  margin: 30px 0;
+}
+.skills .wrapper .appear {
+  text-align: center;
+}
+.skills .wrapper .appear p {
+  font-size: calc(1rem + 4vw);
+  letter-spacing: 4px;
+  background: rgb(0, 51, 102);
+  color: rgb(249, 249, 249);
+  display: inline-block;
+  padding: 8px 12px 12px;
+}
+
+.portfolio {
+  margin: 200px 0;
+}
+.portfolio .project-container {
+  margin-top: 100px;
+}
+.portfolio .project-container .project {
+  position: relative;
+  width: 60vw;
+  max-width: 600px;
+  margin: 50px 5vw;
+}
+.portfolio .project-container .project:hover img {
+  filter: brightness(20%);
+}
+.portfolio .project-container .project:hover .project-info {
+  opacity: 1;
+  transform: translate(-30px, -50%);
+}
+.portfolio .project-container .project img {
+  transition: 0.4s ease-out;
+  width: 100%;
+}
+.portfolio .project-container .project .project-info {
+  position: absolute;
+  top: 50%;
+  transform: translate(-80px, -50%);
+  margin-left: 8vw;
+  transition: 0.4s ease-out;
+  opacity: 0;
+  color: rgb(249, 249, 249);
+}
+.portfolio .project-container .project .project-info a {
+  font-size: calc(1rem + 3vw);
+}
+.portfolio .project-container .project .project-info p {
+  font-size: 1rem;
+  margin-top: 1.5vw;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: scroll;
+  text-align: left;
+}
+.portfolio .project-container #prj2 {
+  margin: 0 6vw 0 auto;
+}
+.portfolio .project-container #prj3 {
+  margin-left: 8vw;
+}
+
+.contact {
+  margin: 150px 0 120px;
+}
+.contact p {
+  font-size: calc(1rem + 2vw);
+  margin: 25px 0;
+}
+.contact p a {
+  font-size: calc(1rem + 2vw);
+  color: rgb(255, 153, 102);
+}
+.contact .img2 {
+  background: url("./../img/logo/png/logo-color.png") center/cover;
+  border-radius: 50%;
 }
 
 .form .section-container {
