@@ -25,14 +25,10 @@
   color: rgb(161, 198, 236);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "font1", serif;
-  background: rgb(249, 249, 249);
-  color: rgb(0, 51, 102);
+  background: rgb(0, 51, 102);
+  color: rgb(249, 249, 249);
   transition: 0.7s ease-in-out;
 }
 
@@ -48,6 +44,7 @@ h1 {
   font-weight: bold;
   font-size: calc(1.8rem + 7vw);
   text-align: left;
+  color: rgb(249, 249, 249);
 }
 
 h2,
@@ -130,8 +127,14 @@ a:visited::after {
   margin: 0 auto;
   background: rgb(0, 51, 102);
   transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
-  transform-origin: left;
   transition-delay: 0.65s;
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.line-wrapper.is-inview .line {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .wrapper {
@@ -145,15 +148,36 @@ a:visited::after {
   transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .wrapper .appear.is-inview {
-  transition-delay: 2s;
+  transition-delay: 1.33s;
   opacity: 1;
   transform: none;
 }
+.wrapper .appear.is-inview p {
+  transition-delay: 0.67s;
+}
 .wrapper #h1-wrapper {
-  transition-delay: 1s;
+  transition-delay: 0.67s;
 }
 .wrapper #h4-wrapper {
-  transition-delay: 3s;
+  transition-delay: 2s;
+}
+.wrapper #skill1.appear.is-inview {
+  transition-delay: 0.4s;
+}
+.wrapper #skill2.appear.is-inview {
+  transition-delay: 0.6s;
+}
+.wrapper #skill3.appear.is-inview {
+  transition-delay: 0.8s;
+}
+.wrapper #skill4.appear.is-inview {
+  transition-delay: 1s;
+}
+.wrapper #l1.appear.is-inview {
+  transition-delay: 0.2s;
+}
+.wrapper #l2.appear.is-inview {
+  transition-delay: 0.8s;
 }
 
 .section-container {
@@ -398,9 +422,6 @@ footer .section-container .copyright i {
   }
 }
 
-.bio {
-  background: rgb(161, 198, 236);
-}
 .bio .section-container {
   padding: 200px 0;
 }
@@ -438,6 +459,7 @@ footer .section-container .copyright i {
   margin: 200px 0 250px;
 }
 .skills h2 {
+  background: rgb(255, 153, 102);
   margin-bottom: 150px;
 }
 .skills .wrapper {
@@ -446,7 +468,7 @@ footer .section-container .copyright i {
 .skills .wrapper .appear {
   text-align: center;
 }
-.skills .wrapper .appear p {
+.skills .wrapper .appear div {
   font-size: calc(1rem + 4vw);
   letter-spacing: 4px;
   background: rgb(0, 51, 102);
@@ -456,7 +478,16 @@ footer .section-container .copyright i {
 }
 
 .portfolio {
-  margin: 200px 0;
+  margin: 100px 0 0;
+}
+.portfolio h2 {
+  padding: 0 0 100px;
+}
+.portfolio #h3-2-wrapper {
+  transition-delay: 0.5s;
+}
+.portfolio #h3-2-wrapper h3 {
+  font-size: calc(1.3rem + 3vw);
 }
 .portfolio .project-container {
   margin-top: 100px;
@@ -466,6 +497,16 @@ footer .section-container .copyright i {
   width: 60vw;
   max-width: 600px;
   margin: 50px 5vw;
+}
+.portfolio .project-container .project::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  top: -3px;
+  background: rgb(249, 249, 249);
+  transition: width 2s ease-out;
+  transition-delay: 0.8s;
 }
 .portfolio .project-container .project:hover img {
   filter: brightness(20%);
@@ -499,6 +540,9 @@ footer .section-container .copyright i {
   overflow: scroll;
   text-align: left;
 }
+.portfolio .project-container .project.is-inview::before {
+  width: 0;
+}
 .portfolio .project-container #prj2 {
   margin: 0 6vw 0 auto;
 }
@@ -520,6 +564,7 @@ footer .section-container .copyright i {
 .contact .img2 {
   background: url("./../img/logo/png/logo-color.png") center/cover;
   border-radius: 50%;
+  filter: none;
 }
 
 .form .section-container {

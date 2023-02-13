@@ -16,8 +16,14 @@ const scroll = new LocomotiveScroll({
 
 // Body color
 scroll.on("scroll", () => {
-  if (document.querySelector("#color.is-inview")) {
+  if (document.querySelector("#color1.is-inview")) {
     document.body.style.background = sassColor3;
+    document.body.style.color = sassColor1;
+  } else if (
+    document.querySelector("#color2.is-inview") ||
+    document.querySelector("#color3.is-inview")
+  ) {
+    document.body.style.background = sassColor5;
     document.body.style.color = sassColor1;
   } else {
     document.body.style.background = sassColor1;

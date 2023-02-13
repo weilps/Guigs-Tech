@@ -42,14 +42,14 @@ $color5: rgb(161, 198, 236);
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 body {
   font-family: $font1;
-  background: $color1;
-  color: $color3;
+  background: $color3;
+  color: $color1;
   transition: 0.7s ease-in-out;
 }
 
@@ -62,6 +62,7 @@ h1 {
   font-weight: bold;
   font-size: calc(1.8rem + 7vw);
   text-align: left;
+  color: $color1;
   // @media screen and (max-width: 925px) {
   //   font-size: 3rem;
   // }
@@ -145,8 +146,17 @@ a:visited {
   margin: 0 auto;
   background: $color3;
   transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
-  transform-origin: left;
+  // transform-origin: left;
   transition-delay: 0.65s;
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.line-wrapper.is-inview {
+  .line {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 
 .wrapper {
@@ -161,17 +171,38 @@ a:visited {
 
   .appear.is-inview {
     // .appear {
-    transition-delay: 2s;
+    transition-delay: 1.33s;
     opacity: 1;
     transform: none;
     // }
+    p {
+      transition-delay: 0.67s;
+    }
   }
 
   #h1-wrapper {
-    transition-delay: 1s;
+    transition-delay: 0.67s;
   }
   #h4-wrapper {
-    transition-delay: 3s;
+    transition-delay: 2s;
+  }
+  #skill1.appear.is-inview {
+    transition-delay: 0.4s;
+  }
+  #skill2.appear.is-inview {
+    transition-delay: 0.6s;
+  }
+  #skill3.appear.is-inview {
+    transition-delay: 0.8s;
+  }
+  #skill4.appear.is-inview {
+    transition-delay: 1s;
+  }
+  #l1.appear.is-inview {
+    transition-delay: 0.2s;
+  }
+  #l2.appear.is-inview {
+    transition-delay: 0.8s;
   }
 }
 
